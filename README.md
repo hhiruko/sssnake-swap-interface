@@ -1,9 +1,10 @@
-# 🥞 Pancake Swap Exchange
+# SSSnakeSwap Exchange
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c6ef7e73-4a84-410d-83b0-b89326787dff/deploy-status)](https://app.netlify.com/sites/swap-master/deploys)
+Contract Addresses:
 
-[PancakeSwap](https://pancakeswap.finance/) is an automated market maker (“**AMM**”) that allows two tokens to be exchanged on the [Binance Smart Chain](https://www.binance.org/en/smartChain) (BSC). It is fast, cheap, and allows anyone to participate.
+WBNB: 0x4D5aE0BcB98aa75b95a5155c9d82aC096c6381a9
+SSS: 0xF63acf39D2992adC4849ee3898598e4A593F9332
 
-This repo is responsible for the **exchange** interface of the AMM: [exchange.pancakeswap.finance](https://exchange.pancakeswap.finance/)
-
-If you want to contribute, please refer to the [contributing guidelines](./CONTRIBUTING.md) of this project.
+Factory: 0xf46e45BA34b4b95FE9B74DD9eF9e8e208A2cB1B6
+Router01: 0x877eA3D7E04f90fE24301C818B5A1a1aFD980a04
+Router: 0xfb947BbA79009aFca65F9afE55d90c3E0692672f
