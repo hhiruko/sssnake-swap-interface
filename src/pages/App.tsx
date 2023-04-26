@@ -17,7 +17,6 @@ import { EN, allLanguages } from '../constants/localisation/languageCodes'
 import { LanguageContext } from '../hooks/LanguageContext'
 import { TranslationsContext } from '../hooks/TranslationsContext'
 
-import Menu from '../components/Menu'
 import useGetDocumentTitlePrice from '../hooks/useGetDocumentTitlePrice'
 
 const AppWrapper = styled.div`
@@ -38,7 +37,7 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   justify-content: center;
-  background-image: url('/images/group-pancake.svg');
+  background-image: url('/images/pancakeswap.png');
   background-repeat: no-repeat;
   background-position: bottom 24px center;
   background-size: 90%;
@@ -48,11 +47,11 @@ const BodyWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/arch-${({ theme }) => (theme.isDark ? 'dark' : 'light')}.svg'),
-      url('/images/left-pancake.svg'), url('/images/right-pancake.svg');
+    background-image: url('/images/arch-dark.png'),
+      url('/images/left.png'), url('/images/right.png');
     background-repeat: no-repeat;
-    background-position: center 420px, 10% 230px, 90% 230px;
-    background-size: contain, 266px, 266px;
+    background-position: center 0px, 5% 130px, 95% 130px;
+    background-size: contain, 450px, 450px;
     min-height: 90vh;
   }
 `
@@ -132,7 +131,7 @@ export default function App() {
             value={{ selectedLanguage, setSelectedLanguage: handleLanguageSelect, translatedLanguage, setTranslatedLanguage }}
           >
             <TranslationsContext.Provider value={{ translations, setTranslations }}>
-              <Menu>
+              
                 <BodyWrapper>
                   <Popups />
                   <Web3ReactManager>
@@ -153,7 +152,7 @@ export default function App() {
                   </Web3ReactManager>
                   <Marginer />
                 </BodyWrapper>
-              </Menu>
+              
             </TranslationsContext.Provider>
           </LanguageContext.Provider>
         </AppWrapper>
