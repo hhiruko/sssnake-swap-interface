@@ -168,6 +168,7 @@ export default function PoolFinder() {
             )}
           </AutoColumn>
 
+          
           <CurrencySearchModal
             isOpen={showSearch}
             onCurrencySelect={handleCurrencySelect}
@@ -175,6 +176,7 @@ export default function PoolFinder() {
             showCommonBases
             selectedCurrency={(activeField === Fields.TOKEN0 ? currency1 : currency0) ?? undefined}
           />
+          
         </CardBody>
       </AppBody>
     </>

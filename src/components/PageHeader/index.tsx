@@ -2,12 +2,15 @@ import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 import { Heading, IconButton, Text, Flex, useModal, TuneIcon, HistoryIcon } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
+
+import QuestionHelper from 'components/QuestionHelper'
 import SettingsModal from './SettingsModal'
 import RecentTransactionsModal from './RecentTransactionsModal'
 
 interface PageHeaderProps {
   title: ReactNode
   description?: ReactNode
+  tutorial: string
   children?: ReactNode
 }
 
@@ -20,7 +23,7 @@ const Details = styled.div`
   flex: 1;
 `
 
-const PageHeader = ({ title, description, children }: PageHeaderProps) => {
+const PageHeader = ({ title, description, tutorial, children }: PageHeaderProps) => {
   const TranslateString = useI18n()
   const [onPresentSettings] = useModal(<SettingsModal translateString={TranslateString} />)
   const [onPresentRecentTransactions] = useModal(<RecentTransactionsModal translateString={TranslateString} />)
@@ -46,6 +49,10 @@ const PageHeader = ({ title, description, children }: PageHeaderProps) => {
         >
           <HistoryIcon width="24px" color="currentColor" />
         </IconButton>
+        <QuestionHelper
+              text={tutorial}
+            />
+        
       </Flex>
       {children && <Text mt="16px">{children}</Text>}
     </StyledPageHeader>

@@ -66,10 +66,12 @@ export function CurrencySearch({
 
   const audioPlay = useSelector<AppState, AppState['user']['audioPlay']>((state) => state.user.audioPlay)
 
+  
   const filteredTokens: Token[] = useMemo(() => {
     if (isAddressSearch) return searchToken ? [searchToken] : []
     return filterTokens(Object.values(allTokens), searchQuery)
-  }, [isAddressSearch, searchToken, allTokens, searchQuery])
+  }, [isAddressSearch,  searchToken,  allTokens, searchQuery])
+  
 
   const filteredSortedTokens: Token[] = useMemo(() => {
     if (searchToken) return [searchToken]
@@ -112,7 +114,7 @@ export function CurrencySearch({
   const handleInput = useCallback((event) => {
     const input = event.target.value
     const checksummedInput = isAddress(input)
-    setSearchQuery(checksummedInput || input)
+    setSearchQuery( checksummedInput ||  input)
     fixedList.current?.scrollTo(0)
   }, [])
 
@@ -146,28 +148,17 @@ export function CurrencySearch({
             <QuestionHelper
               text={TranslateString(
                 128,
-                'Find a token by searching for its name or symbol or by pasting its address below.'
+                'SSSnake Swap has a regulated token list to provide you with only the correct tokens.'
               )}
             />
           </Text>
           <CloseIcon onClick={onDismiss} />
         </RowBetween>
-        <SearchInput
-          type="text"
-          id="token-search-input"
-          placeholder={t('tokenSearchPlaceholder')}
-          value={searchQuery}
-          ref={inputRef as RefObject<HTMLInputElement>}
-          onChange={handleInput}
-          onKeyDown={handleEnter}
-        />
+        
         {showCommonBases && (
           <CommonBases chainId={chainId} onSelect={handleCurrencySelect} selectedCurrency={selectedCurrency} />
         )}
-        <RowBetween>
-          <Text fontSize="14px">{TranslateString(126, 'Token name')}</Text>
-          <SortButton ascending={invertSearchOrder} toggleSortOrder={() => setInvertSearchOrder((iso) => !iso)} />
-        </RowBetween>
+        
       </PaddedColumn>
 
       <Separator />

@@ -61,6 +61,7 @@ export default function Pool() {
         <PageHeader
           title={TranslateString(262, 'Liquidity')}
           description={TranslateString(1168, 'Add liquidity to receive LP tokens')}
+          tutorial='Here you can add liquidity to any available pool. Your tokens will be deposited here, however you can withdraw them anytime. You will get fees from each swap action in your chosen token pairs.'
         >
           <Button id="join-pool-button" as={Link} to="/add/BNB">
             {TranslateString(168, 'Add Liquidity')}
