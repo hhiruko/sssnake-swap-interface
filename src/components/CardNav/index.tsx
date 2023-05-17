@@ -19,6 +19,9 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
         <ButtonMenuItem id="pool-nav-link" to="/pool" as={Link}>
           {TranslateString(262, 'Liquidity')}
         </ButtonMenuItem>
+        <ButtonMenuItem id="validate-nav-link" to="/validate" as={Link}>
+          {TranslateString(9999, 'Validate')}
+        </ButtonMenuItem>
       </ButtonMenu>
     </StyledNav>
   )

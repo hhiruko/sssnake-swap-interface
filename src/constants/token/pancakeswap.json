@@ -17,6 +17,14 @@
       "chainId": 97,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xF63acf39D2992adC4849ee3898598e4A593F9332.png"
+    },
+    {
+      "name": "Binance USD",
+      "symbol": "BUSD",
+      "address": "0x5b95468E0fB5D92421ABA1eB7b57ffFB9CAE8b25",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x5b95468E0fB5D92421ABA1eB7b57ffFB9CAE8b25.png"
     }
   ]
 }

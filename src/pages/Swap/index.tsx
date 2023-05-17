@@ -303,7 +303,7 @@ const Swap = () => {
           />
           <PageHeader
             title={TranslateString(8, 'Exchange')}
-            description={TranslateString(1192, 'Trade tokens in an instant')}
+            description={TranslateString(1192, 'Trade trusted tokens')}
             tutorial='Here you can buy and sell tokens for a market price set by an Automated Market Maker. There will be a very small fee.'
           />
           <CardBody>

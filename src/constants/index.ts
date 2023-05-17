@@ -10,7 +10,7 @@ type ChainTokenList = {
 export const CAKE = new Token(ChainId.BSCTESTNET, '0xB8F5B50ed77596b5E638359d828000747bb3dd89', 18, 'CAKE', 'PancakeSwap Token')
 export const WBNB = new Token(ChainId.BSCTESTNET, '0x4D5aE0BcB98aa75b95a5155c9d82aC096c6381a9', 18, 'WBNB', 'Wrapped BNB')
 export const DAI = new Token(ChainId.BSCTESTNET, '0x3Cf204795c4995cCf9C1a0B3191F00c01B03C56C', 18, 'DAI', 'Dai Stablecoin')
-export const BUSD = new Token(ChainId.BSCTESTNET, '0xE0dFffc2E01A7f051069649aD4eb3F518430B6a4', 18, 'BUSD', 'Binance USD')
+export const BUSD = new Token(ChainId.BSCTESTNET, '0x5b95468E0fB5D92421ABA1eB7b57ffFB9CAE8b25', 18, 'BUSD', 'Binance USD') // BUSD updated
 export const USDT = new Token(ChainId.BSCTESTNET, '0x7afd064DaE94d73ee37d19ff2D264f5A2903bBB0', 18, 'USDT', 'Tether USD')
 export const ETH = new Token(
   ChainId.BSCTESTNET,
